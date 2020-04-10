@@ -5,4 +5,5 @@ curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firef
   | sed -n "s/.*value='\(http:.*\)'.*/\1/p" \
   | xargs wget -O - \
   | gunzip \
-  | egrep -v '^#'
+  | egrep -v '^#'\
+  | gzip
